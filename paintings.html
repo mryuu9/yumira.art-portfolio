@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paintings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+        <img src="name_logo.png" alt="Your Name - Home">
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="about.html">About Me</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Work ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="paintings.html">Paintings</a></li>
+          <li><a href="digital-art.html">Digital Art</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </li>
+      <li class="mobile-only-link"><a href="https://www.instagram.com/art.yumira" target="_blank">Instagram</a></li>
+    </ul>
+    <a href="https://www.instagram.com/art.yumira" target="_blank" class="instagram-link">
+        <img src="insta_logo.png" alt="Instagram">
+    </a>
+  </nav>
+</header>
+
+  <main class="gallery-page">
+  <h1>PAINTINGS</h1>
+
+
+  <div class="art-grid">
+
+    <div class="art-piece" onclick="openLightbox(0)">
+      <img src="paintings/lighthouse.jpeg" alt="Painting 1">
+      <div class="art-overlay">
+        <h3>Michigan City, WI</h3>
+        <p>acrylic, 11"x5.5", 2026</p>
+      </div>
+    </div>
+
+    <div class="art-piece" onclick="openLightbox(1)">
+      <img src="paintings/geese.jpeg" alt="Painting 2">
+      <div class="art-overlay">
+        <h3>Neighborhood Geese</h3>
+        <p>acrylic, 7.5"x5.5", 2026</p>
+      </div>
+    </div>
+
+    <div class="art-piece" onclick="openLightbox(2) ">
+      <img src="paintings/cow.jpeg" alt="Painting 3">
+      <div class="art-overlay">
+        <h3>On the Hill</h3>
+        <p>acrylic, 7.5"x5.5", 2026</p>
+      </div>
+    </div>
+    <div class="art-piece" onclick="openLightbox(3)">
+    <img src="paintings/michigan.jpeg" alt="Painting 4">
+    <div class="art-overlay">
+      <h3>House on the Docks</h3>
+      <p>acrylic, 6"x5", 2026</p>
+    </div>
+  </div>
+
+  <div class="art-piece" onclick="openLightbox(4) ">
+    <img src="paintings/dekalb.jpeg" alt="Painting 5">
+    <div class="art-overlay">
+      <h3>In the Neighborhood</h3>
+      <p>acrylic, 6.75"x5", 2026</p>
+    </div>
+  </div>
+
+  <div class="art-piece" onclick="openLightbox(5)">
+    <img src="paintings/cat.jpeg" alt="Painting 6">
+    <div class="art-overlay">
+      <h3>Cat Nap</h3>
+      <p>acrylic, 18"x14", 2026</p>
+    </div>
+  </div>
+  <div class="art-piece" onclick="openLightbox(6) ">
+      <img src="paintings/yoga.jpeg" alt="Painting 7">
+      <div class="art-overlay">
+        <h3>Tree Pose</h3>
+        <p>acrylic, 11"x14", 2026</p>
+      </div>
+    </div>
+    <div class="art-piece" onclick="openLightbox(7)">
+    <img src="paintings/sequoia.jpeg" alt="Painting 8">
+    <div class="art-overlay">
+      <h3>Sequoia</h3>
+      <p>oil, 5"x8", 2025</p>
+    </div>
+  </div>
+
+  <div class="art-piece" onclick="openLightbox(8)">
+    <img src="paintings/running.jpeg" alt="Painting 9">
+    <div class="art-overlay">
+      <h3>Free-Spirit</h3>
+      <p>acrylic, 18"x20", 2026</p>
+    </div>
+  </div>
+
+  <div class="art-piece" onclick="openLightbox(9)">
+    <img src="paintings/grainger-geese.JPG" alt="Painting 10">
+    <div class="art-overlay">
+      <h3>Grainger Geese</h3>
+      <p>oil + acrylic, 8"x10", 2024</p>
+    </div>
+  </div>
+
+<div class="art-piece" onclick="openLightbox(10)">
+      <img src="paintings/chicago.jpeg" alt="Painting 11">
+      <div class="art-overlay">
+        <h3>Chicago Neighbor</h3>
+        <p>gouache, 7.25"x11", 2026</p>
+      </div>
+    </div>
+
+    <div class="art-piece" onclick="openLightbox(11)">
+      <img src="paintings/bear.jpeg" alt="Painting 12">
+      <div class="art-overlay">
+        <h3>Slow Mornings</h3>
+        <p>acrylic, 8"x12", 2022</p>
+      </div>
+    </div>
+
+    <div class="art-piece" onclick="openLightbox(12) ">
+      <img src="paintings/nola.jpeg" alt="Painting 13">
+      <div class="art-overlay">
+        <h3>NOLA Street</h3>
+        <p>gouache, 6"x11", 2026</p>
+      </div>
+    </div>
+    <div class="art-piece" onclick="openLightbox(13)">
+    <img src="paintings/star-ladybug.jpeg" alt="Painting 14">
+    <div class="art-overlay">
+      <h3>Feeling Lucky</h3>
+      <p>gouache, 6"x11", 2026</p>
+    </div>
+  </div>
+
+  <div class="art-piece" onclick="openLightbox(14) ">
+    <img src="paintings/iris.jpeg" alt="Painting 15">
+    <div class="art-overlay">
+      <h3>Iris</h3>
+      <p>gouache, 5.5"x8.5", 2025</p>
+    </div>
+  </div>
+
+  <div class="art-piece" onclick="openLightbox(15)">
+    <img src="paintings/sycamore-house.jpeg" alt="Painting 16">
+    <div class="art-overlay">
+      <h3>Sycamore, IL</h3>
+      <p>acrylic, 7.5"x11", 2026</p>
+    </div>
+  </div>
+
+  <div class="art-piece" onclick="openLightbox(16) ">
+      <img src="paintings/butterfly.jpeg" alt="Painting 17">
+      <div class="art-overlay">
+        <h3>Luna</h3>
+        <p>acrylic, 11"x14", 2025</p>
+      </div>
+    </div>
+    <div class="art-piece" onclick="openLightbox(17)">
+    <img src="paintings/flowers.jpeg" alt="Painting 18">
+    <div class="art-overlay">
+      <h3>Withering Flowers</h3>
+      <p>acrylic, 12"x16", 2022</p>
+    </div>
+  </div>
+
+  <div class="art-piece" onclick="openLightbox(18)">
+    <img src="paintings/ap-spoon.jpg" alt="Painting 19">
+    <div class="art-overlay">
+      <h3>Food for Thought</h3>
+      <p>oil, 10"x10", 2022</p>
+    </div>
+  </div>
+
+  <div class="art-piece" onclick="openLightbox(16) ">
+      <img src="paintings/ap-ladybug.jpg" alt="Painting 17">
+      <div class="art-overlay">
+        <h3>Firebug</h3>
+        <p>acrylic, 6"x6", 2022</p>
+      </div>
+    </div>
+    <div class="art-piece" onclick="openLightbox(17)">
+    <img src="paintings/cavi.JPG" alt="Painting 18">
+    <div class="art-overlay">
+      <h3>Commissioned Portrait</h3>
+      <p>acrylic, 20"x20", 2023</p>
+    </div>
+  </div>
+
+  <div class="art-piece" onclick="openLightbox(21)">
+    <img src="paintings/racine.jpeg" alt="Painting 22">
+    <div class="art-overlay">
+      <h3>Racine, WI</h3>
+      <p>acrylic, 18"x16", 2025</p>
+    </div>
+  </div>
+
+  <div class="art-piece" onclick="openLightbox(22)">
+    <img src="paintings/woodstock.jpg" alt="Painting 23">
+    <div class="art-overlay">
+      <h3>Downtown Woodstock</h3>
+      <p>acrylic, 18"x24", 2022</p>
+    </div>
+  </div>
+
+  <div class="art-piece" onclick="openLightbox(23)">
+    <img src="paintings/sycamore-park.jpeg" alt="Painting 24">
+    <div class="art-overlay">
+      <h3>Sycamore Park</h3>
+      <p>acrylic, 8.5"x5.5", 2026</p>
+    </div>
+  </div>
+
+  </div>
+</main>
+
+  <footer> 
+    <p>&copy; 2026 Mira Ryu. All rights reserved.</p>
+  </footer>
+
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <span class="lightbox-arrow lightbox-prev">&#10094;</span>
+  <img src="" alt="" id="lightbox-img">
+  <span class="lightbox-arrow lightbox-next">&#10095;</span>
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const artworks = [
+      { src: "paintings/lighthouse.jpeg", title: "Michigan City, WI", details: "acrylic, 11\"x5.5\", 2026" },
+      { src: "paintings/geese.jpeg", title: "Neighborhood Geese", details: "acrylic, 7.5\"x5.5\", 2026" },
+      { src: "paintings/cow.jpeg", title: "On the Hill", details: "acrylic, 7.5\"x5.5\", 2026" },
+      { src: "paintings/michigan.jpeg", title: "House on the Docks", details: "acrylic, 6\"x5\", 2026" },
+      { src: "paintings/dekalb.jpeg", title: "In the Neighborhood", details: "acrylic, 6.75\"x5\", 2026" },
+      { src: "paintings/cat.jpeg", title: "Cat Nap", details: "acrylic, 18\"x14\", 2026" },
+      { src: "paintings/yoga.jpeg", title: "Tree Pose", details: "acrylic, 11\"x14\", 2026" },
+      { src: "paintings/sequoia.jpeg", title: "Sequoia", details: "oil, 5\"x8\", 2025" },
+      { src: "paintings/running.jpeg", title: "Free-Spirit", details: "acrylic, 18\"x20\", 2026" },
+      { src: "paintings/grainger-geese.JPG", title: "Grainger Geese", details: "oil + acrylic, 8\"x10\", 2024" },
+      { src: "paintings/chicago.jpeg", title: "Chicago Neighbor", details: "gouache, 7.25\"x11\", 2026" },
+      { src: "paintings/bear.jpeg", title: "Slow Mornings", details: "acrylic, 8\"x12\", 2022" },
+      { src: "paintings/nola.jpeg", title: "NOLA Street", details: "gouache, 6\"x11\", 2026" },
+      { src: "paintings/star-ladybug.jpeg", title: "Feeling Lucky", details: "gouache, 6\"x11\", 2026" },
+      { src: "paintings/iris.jpeg", title: "Iris", details: "gouache, 5.5\"x8.5\", 2025" },
+      { src: "paintings/sycamore-house.jpeg", title: "Sycamore, IL", details: "acrylic, 7.5\"x11\", 2026" },
+      { src: "paintings/butterfly.jpeg", title: "Luna", details: "acrylic, 11\"x14\", 2025" },
+      { src: "paintings/flowers.jpeg", title: "Withering Flowers", details: "acrylic, 12\"x16\", 2022" },
+      { src: "paintings/ap-spoon.jpg", title: "Food for Thought", details: "oil, 10\"x10\", 2022" },
+      { src: "paintings/ap-ladybug.jpg", title: "Firebug", details: "acrylic, 6\"x6\", 2022" },
+      { src: "paintings/cavi.JPG", title: "Commissioned Portrait", details: "acrylic, 20\"x20\", 2023" },
+      { src: "paintings/racine.jpeg", title: "Racine, WI", details: "acrylic, 18\"x16\", 2025" },
+      { src: "paintings/woodstock.jpg", title: "Downtown Woodstock", details: "acrylic, 18\"x24\", 2022" },
+      { src: "paintings/sycamore-park.jpeg", title: "Sycamore Park", details: "acrylic, 8.5\"x5.5\", 2026" }
+    ];
+
+    let currentIndex = 0;
+
+    function showImage() {
+      const art = artworks[currentIndex];
+      document.getElementById('lightbox-img').src = art.src;
+      document.getElementById('lightbox-img').alt = art.title;
+      document.getElementById('lightbox-caption').innerHTML = `<h3>${art.title}</h3><p>${art.details}</p>`;
+    }
+
+    window.openLightbox = function(index) {
+      currentIndex = index;
+      showImage();
+      document.getElementById('lightbox').classList.add('active');
+    };
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+
+    function nextImage(event) {
+      event.stopPropagation();
+      currentIndex = (currentIndex + 1) % artworks.length;
+      showImage();
+    }
+
+    function prevImage(event) {
+      event.stopPropagation();
+      currentIndex = (currentIndex - 1 + artworks.length) % artworks.length;
+      showImage();
+    }
+
+    document.getElementById('lightbox').addEventListener('click', closeLightbox);
+    document.querySelector('.lightbox-next').addEventListener('click', nextImage);
+    document.querySelector('.lightbox-prev').addEventListener('click', prevImage);
+
+    document.addEventListener('keydown', function(e) {
+      if (!document.getElementById('lightbox').classList.contains('active')) return;
+      if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % artworks.length; showImage(); }
+      if (e.key === 'ArrowLeft') { currentIndex = (currentIndex - 1 + artworks.length) % artworks.length; showImage(); }
+      if (e.key === 'Escape') closeLightbox();
+    });
+  });
+</script>
+
+<script src="nav.js"></script>
+</body>
+</html>

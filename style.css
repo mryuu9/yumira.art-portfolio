@@ -1,0 +1,590 @@
+@font-face {
+  font-family: "MyHandwritingFont";
+  src: url("fonts/My_handwriting-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  font-family: "MyHandwritingFont", sans-serif;
+  font-size: 25px; /* adjust this number */
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  color: #222;
+}
+
+header {
+  text-align: center;
+  padding: 0px 0px;
+}
+
+#gallery {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8em;
+  color: #888;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  background-color: #b0aa35;
+  padding: 0px 30px;
+  height: 150px; /*fixed height */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 150px; /* adjust this to whatever looks right */
+  width: auto;
+  display: block;
+  position: relative;
+  top: -8px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 130px;
+  margin: 0;
+  padding: 0;
+  justify-self: center;
+}
+
+.nav-links > li {
+  position: relative;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 8px 4px;
+}
+
+.nav-links a:hover {
+  color: #ccc;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  background-color: #7f992f;
+  min-width: 160px;
+  padding: 0;
+  margin: 0;
+  border-radius: 4px;
+  overflow: hidden;
+
+  /* hidden by default */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.2s ease;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 16px;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #ffb3de;
+}
+
+/* show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.instagram-link {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+}
+
+.instagram-link img {
+  height: 150px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+  top: 15px; /* adjust this number to taste */
+}
+
+.instagram-link:hover img {
+  opacity: 1;
+}
+
+/* Adjustable margins — change these values to test different widths */
+:root {
+  --page-margin: 60px;   /* space on left/right of the whole page content */
+  --column-gap: 40px;    /* space between the text and the photo */
+}
+
+.about-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px var(--page-margin);
+}
+
+.about-page h1 {
+  margin-bottom: 30px;
+}
+
+.about-content {
+  display: flex;
+  gap: var(--column-gap);
+  align-items: flex-start;
+}
+
+.about-text {
+  flex: 2; /* takes up 3/4 of the space */
+}
+
+.about-photo {
+  flex: 2; /* takes up 1/4 of the space */
+}
+
+.about-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-text {
+    flex: none;
+    width: 100%;
+  }
+
+  .about-photo {
+    flex: none;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto; /* centers the photo when stacked */
+  }
+
+  .about-page {
+    padding: 30px var(--page-margin);
+  }
+}
+
+.gallery-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px var(--page-margin);
+}
+
+.gallery-page h1 {
+  margin-bottom: 30px;
+}
+
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 20px;
+  align-items: start;
+}
+
+.art-piece {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.art-piece img {
+    width: 100%;
+  height: auto;
+  display: block;
+}
+
+.art-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* dims the artwork */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+
+  /* hidden by default */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.art-piece:hover .art-overlay {
+  opacity: 1;
+}
+
+.art-overlay h3 {
+  margin: 0 0 8px 0;
+}
+
+.art-overlay p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 2.5em;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.lightbox-image-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+  padding: 10px 15px;
+  user-select: none;
+  transition: opacity 0.2s ease;
+  opacity: 0.7;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+.lightbox-arrow:hover {
+  opacity: 1;
+}
+
+.lightbox-prev {
+  left: 10px;
+}
+
+.lightbox-next {
+  right: 10px;
+}
+
+.lightbox-caption {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 12px 24px;
+  border-radius: 6px;
+  max-width: 80%;
+}
+
+.lightbox-caption h3 {
+  margin: 0 0 4px 0;
+}
+
+.lightbox-caption p {
+  margin: 0;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.lightbox-content-side {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 85%;
+  max-height: 85%;
+}
+
+.lightbox-content-side img {
+  max-width: 60vw;
+  max-height: 85vh;
+  object-fit: contain;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-caption-side {
+  color: #fff;
+  max-width: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.lightbox-caption-side h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.4em;
+}
+
+.lightbox-caption-side p {
+  margin: 0;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+.lightbox-counter {
+  margin-top: 8px !important;
+  font-size: 0.8em !important;
+  opacity: 0.6;
+}
+
+.masonry-grid {
+  column-count: 3;
+  column-gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px var(--page-margin);
+}
+
+.masonry-grid .art-piece {
+  break-inside: avoid; /* prevents a single piece from splitting across columns */
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.masonry-grid .art-piece img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.home-intro {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px var(--page-margin) 20px;
+}
+
+.home-intro h1 {
+  margin: 0 0 12px 0;
+}
+
+.home-intro p {
+  margin: 0;
+  max-width: 1500px;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    font-size: 2.5em;
+    margin-right: 30px; /* adjust this number to taste */
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    padding: 10px 0;
+    gap: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 14px 0;
+  }
+
+  .mobile-only-link {
+    display: none;
+  }
+
+  /* dropdown becomes tap-based, not hover-based, on mobile */
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+    transition: none;
+    background-color: #2c2c2c;
+  }
+
+  .dropdown-menu.active {
+    display: block;
+  }
+
+  .navbar {
+    position: relative; /* so the dropdown nav-links can position against it */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 12px;
+  }
+
+  .logo,
+  .instagram-link {
+    min-width: 0; /* allows these to shrink instead of forcing overflow */
+  }
+
+  .logo img {
+    height: auto;
+    max-width: 160px; /* cap width instead of setting height */
+  }
+
+  
+
+  .instagram-link img {
+  width: 24px;
+  height: 24px;
+  max-width: 24px;
+  object-fit: contain;
+}
+  .instagram-link {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .masonry-grid {
+    column-count: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .art-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .art-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .lightbox-content-side {
+    flex-direction: column;
+    max-width: 95%;
+    max-height: 90%;
+  }
+
+  .lightbox-content-side img {
+    max-width: 100%;
+    max-height: 60vh;
+  }
+
+  .lightbox-caption-side {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .lightbox-arrow {
+    font-size: 1.5em;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --page-margin: 20px;
+  }
+}
+
+header {
+  position: relative;
+  z-index: 100;
+}
+
+.mobile-only-link {
+  display: none;
+}

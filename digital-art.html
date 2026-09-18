@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Art</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+        <img src="name_logo.png" alt="Your Name - Home">
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="about.html">About Me</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Work ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="paintings.html">Paintings</a></li>
+          <li><a href="digital-art.html">Digital Art</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </li>
+      <li class="mobile-only-link"><a href="https://www.instagram.com/art.yumira" target="_blank">Instagram</a></li>
+    </ul>
+    <a href="https://www.instagram.com/art.yumira" target="_blank" class="instagram-link">
+        <img src="insta_logo.png" alt="Instagram">
+    </a>
+  </nav>
+</header>
+
+    <main class="gallery-page">
+  <h1>DIGITAL ART</h1>
+  <p>All done in Procreate on my iPad mini 7</p>
+
+
+  <div class="art-grid">
+
+    <div class="art-piece" onclick="openLightbox(0)">
+      <img src="digital_artwork/digital_1.jpg" alt="Digital art piece 1">
+      <div class="art-overlay">
+        <h3>Cozy Foraging</h3>
+        <p>6"x8", 2026</p>
+      </div>
+    </div>
+
+    <div class="art-piece" onclick="openLightbox(1)">
+      <img src="digital_artwork/digital_2.jpg" alt="Digital art piece 2">
+      <div class="art-overlay">
+        <h3>Tea Time</h3>
+        <p>8"x6", 2026</p>
+      </div>
+    </div>
+
+    <div class="art-piece" onclick="openLightbox(2) ">
+      <img src="digital_artwork/digital_3.jpg" alt="Digital art piece 3">
+      <div class="art-overlay">
+        <h3>Autumn Ready</h3>
+        <p>8"x6", 2026</p>
+      </div>
+    </div>
+    <div class="art-piece" onclick="openLightbox(3)">
+    <img src="digital_artwork/digital_4.jpg" alt="Digital art piece 4">
+    <div class="art-overlay">
+      <h3>Cat Walk</h3>
+      <p>1488x2266px, 2026</p>
+    </div>
+  </div>
+
+  <div class="art-piece" onclick="openLightbox(4) ">
+    <img src="digital_artwork/digital_5.jpg" alt="Digital art piece 5">
+    <div class="art-overlay">
+      <h3>Average Seattle Man</h3>
+      <p>1488x2266px, 2026</p>
+    </div>
+  </div>
+
+  <div class="art-piece" onclick="openLightbox(5)">
+    <img src="digital_artwork/digital_6.jpg" alt="Digital art piece 6">
+    <div class="art-overlay">
+      <h3>SanFran.2</h3>
+      <p>16"x20", 2026</p>
+    </div>
+  </div>
+  <div class="art-piece" onclick="openLightbox(6) ">
+      <img src="digital_artwork/digital_7.jpg" alt="Digital art piece 7">
+      <div class="art-overlay">
+        <h3>SanFran.1</h3>
+        <p>16"x20", 2026</p>
+      </div>
+    </div>
+    <div class="art-piece" onclick="openLightbox(7)">
+    <img src="digital_artwork/digital_8.jpg" alt="Digital art piece 8">
+    <div class="art-overlay">
+      <h3>Quad Day</h3>
+      <p>30"x20", 2026</p>
+    </div>
+  </div>
+
+  <div class="art-piece" onclick="openLightbox(8)">
+    <img src="digital_artwork/digital_9.jpg" alt="Digital art piece 9">
+    <div class="art-overlay">
+      <h3>Nostalgic Picnic</h3>
+      <p>20"x30", 2026</p>
+    </div>
+  </div>
+
+  <div class="art-piece" onclick="openLightbox(9)">
+    <img src="digital_artwork/digital_10.jpg" alt="Digital art piece 10">
+    <div class="art-overlay">
+      <h3>(Album Cover)</h3>
+      <p>2048x2048px, 2025</p>
+    </div>
+  </div>
+  </div>
+</main>
+
+  <footer> 
+    <p>&copy; 2026 Mira Ryu. All rights reserved.</p>
+  </footer>
+
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <span class="lightbox-arrow lightbox-prev">&#10094;</span>
+  <img src="" alt="" id="lightbox-img">
+  <span class="lightbox-arrow lightbox-next">&#10095;</span>
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const artworks = [
+      { src: "digital_artwork/digital_1.jpg", title: "Cozy Foraging", details: "6\"x8\", 2026" },
+      { src: "digital_artwork/digital_2.jpg", title: "Tea Time", details: "8\"x6\", 2026" },
+      { src: "digital_artwork/digital_3.jpg", title: "Autumn Ready", details: "8\"x6\", 2026" },
+      { src: "digital_artwork/digital_4.jpg", title: "Cat Walk", details: "1488x2266px, 2026" },
+      { src: "digital_artwork/digital_5.jpg", title: "Average Seattle Man", details: "1488x2266px, 2026" },
+      { src: "digital_artwork/digital_6.jpg", title: "SanFran.2", details: "16\"x20\", 2026" },
+      { src: "digital_artwork/digital_7.jpg", title: "SanFran.1", details: "16\"x20\", 2026" },
+      { src: "digital_artwork/digital_8.jpg", title: "Quad Day", details: "30\"x20\", 2026" },
+      { src: "digital_artwork/digital_9.jpg", title: "Nostalgic Picnic", details: "20\"x30\", 2026" },
+      { src: "digital_artwork/digital_10.jpg", title: "(Album Cover)", details: "2048x2048px, 2025" }
+    ];
+
+    let currentIndex = 0;
+
+    function showImage() {
+      const art = artworks[currentIndex];
+      document.getElementById('lightbox-img').src = art.src;
+      document.getElementById('lightbox-img').alt = art.title;
+      document.getElementById('lightbox-caption').innerHTML = `<h3>${art.title}</h3><p>${art.details}</p>`;
+    }
+
+    window.openLightbox = function(index) {
+      currentIndex = index;
+      showImage();
+      document.getElementById('lightbox').classList.add('active');
+    };
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+
+    function nextImage(event) {
+      event.stopPropagation();
+      currentIndex = (currentIndex + 1) % artworks.length;
+      showImage();
+    }
+
+    function prevImage(event) {
+      event.stopPropagation();
+      currentIndex = (currentIndex - 1 + artworks.length) % artworks.length;
+      showImage();
+    }
+
+    document.getElementById('lightbox').addEventListener('click', closeLightbox);
+    document.querySelector('.lightbox-next').addEventListener('click', nextImage);
+    document.querySelector('.lightbox-prev').addEventListener('click', prevImage);
+
+    document.addEventListener('keydown', function(e) {
+      if (!document.getElementById('lightbox').classList.contains('active')) return;
+      if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % artworks.length; showImage(); }
+      if (e.key === 'ArrowLeft') { currentIndex = (currentIndex - 1 + artworks.length) % artworks.length; showImage(); }
+      if (e.key === 'Escape') closeLightbox();
+    });
+  });
+</script>
+
+<script src="nav.js"></script>
+</body>
+</html>
