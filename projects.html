@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiber Arts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+        <img src="name_logo.png" alt="Your Name - Home">
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="about.html">About Me</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Work ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="paintings.html">Paintings</a></li>
+          <li><a href="digital-art.html">Digital Art</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </li>
+      <li class="mobile-only-link"><a href="https://www.instagram.com/art.yumira" target="_blank">Instagram</a></li>
+    </ul>
+    <a href="https://www.instagram.com/art.yumira" target="_blank" class="instagram-link">
+        <img src="insta_logo.png" alt="Instagram">
+    </a>
+  </nav>
+</header>
+
+    <main class="gallery-page">
+  <h1>Projects</h1>
+  <p>During my undergrad, I had the opportunity to continue creating art by taking up projects and opting to create art (posters, zines, comics, etc.) for final projects.</p>
+
+  <div class="art-grid">
+
+    <div class="art-piece" onclick="openLightbox(0)">
+      <img src="projects/house-0.jpeg" alt="Project 1">
+      <div class="art-overlay">
+        <h3>T-shirt Design</h3>
+        <p>2026</p>
+      </div>
+    </div>
+
+    <div class="art-piece" onclick="openLightbox(1)">
+      <img src="projects/lounge-1.jpg" alt="Project 2">
+      <div class="art-overlay">
+        <h3>Artwork for CHP House</h3>
+        <p>2026</p>
+      </div>
+    </div>
+
+    <div class="art-piece" onclick="openLightbox(2)">
+      <img src="projects/merch-1.jpeg" alt="Project 3">
+      <div class="art-overlay">
+        <h3>CHP Merchandise</h3>
+        <p>2025</p>
+      </div>
+    </div>
+
+    <div class="art-piece" onclick="openLightbox(3)">
+      <img src="projects/blocki.jpg" alt="Project 4">
+      <div class="art-overlay">
+        <h3>CHP Art Committee Works</h3>
+        <p>2024-2026</p>
+      </div>
+    </div>
+
+    <div class="art-piece" onclick="openLightbox(4)">
+      <img src="projects/creativity.jpg" alt="Project 5">
+      <div class="art-overlay">
+        <h3>FAA110: Exploring Arts and Creativity</h3>
+        <p>Fall 2024</p>
+      </div>
+    </div>
+
+    <div class="art-piece" onclick="openLightbox(5)">
+      <img src="projects/manga-1.jpg" alt="Project 6">
+      <div class="art-overlay">
+        <h3>ARTJ301: Intro to Manga</h3>
+        <p>Spring 2024</p>
+      </div>
+    </div>
+
+    <div class="art-piece" onclick="openLightbox(6)">
+      <img src="projects/leadership-1.jpg" alt="Project 7">
+      <div class="art-overlay">
+        <h3>BADM199: Exploring Leadership: Philosophy to Pop Culture</h3>
+        <p>Fall 2023</p>
+      </div>
+    </div>
+
+    <div class="art-piece" onclick="openLightbox(7)">
+      <img src="projects/heidi-1.jpg" alt="Project 8">
+      <div class="art-overlay">
+        <h3>HORT223: Intelligent Behavior of Plants</h3>
+        <p>Spring 2023</p>
+      </div>
+    </div>
+
+    <div class="art-piece" onclick="openLightbox(8)">
+      <img src="projects/mural-1.jpg" alt="Project 9">
+      <div class="art-overlay">
+        <h3>Sycamore High School Mural</h3>
+        <p>2022</p>
+      </div>
+    </div>
+    
+  </div>
+</main>
+  
+        <footer>
+    <p>&copy; 2026 Mira Ryu. All rights reserved.</p>
+  </footer>
+
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close">&times;</span>
+
+  <div class="lightbox-content-side">
+    <div class="lightbox-image-wrap">
+      <img src="" alt="" id="lightbox-img">
+      <span class="lightbox-arrow lightbox-prev">&#10094;</span>
+      <span class="lightbox-arrow lightbox-next">&#10095;</span>
+    </div>
+    <div class="lightbox-caption-side" id="lightbox-caption"></div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const projects = [
+      {
+        title: "CHP Anniversary Design",
+        details: "After several drafts and feedback from CHP staff members, I designed the program's t-shirt for their 40th Anniversary celebration.",
+        images: ["projects/house-0.jpeg", "projects/house-1.jpg", "projects/house-2.jpg", "projects/house-3.jpg", "projects/house-4.jpg"]
+      },
+      {
+        title: "CHP House Artwork",
+        details: "The CHP House was looking to replace some of the artwork around the building, so I created this acrylic painting (16\" x 20\") to be displayed in the lounge. I had full creative freedom with the subject of my painting, and was just requested to stick to a cooler toned palette.",
+        images: ["projects/lounge-1.jpg", "projects/lounge-2.jpeg"]
+      },
+      {
+        title: "CHP Merch Design",
+        details: "I drew this CHP shirt design on Procreate for their 2026 store. The staff were looking for a simple, clean line drawing of the house.",
+        images: ["projects/merch-1.jpeg", "projects/merch-2.jpg"]
+      },
+      {
+        title: "CHP Art Committee",
+        details: "Within CHP, I was part of the student council's Art Committee, where we held events for the honors community and worked on various art projects. The following images display (in this order) a painted Block I for the house to display outside on game days, CHP stickers, a little free library installed on the house's front yard, and a squirrel box for the house's resident squirrel Chip.",
+        images: ["projects/blocki.jpg", "projects/stickers.jpg", "projects/freelibrary.jpeg", "projects/squirrelbox.jpeg"]
+      },
+      {
+        title: "FAA110: Exploring Arts and Creativity",
+        details: "This was a final project. I had to present a piece that symbolized my relationship with my culture as an Asian-American and my family background. I decided to showcase items that symbolize good luck for me (norigae for Korea and ladybugs for America) and used a complementary color scheme to further emphasize their contrast, yet harmonious visual.",
+        images: ["projects/creativity.jpg"]
+      },
+      {
+        title: "ARTJ301: Intro to Manga",
+        details: "This was the final project for a manga course, where we discussed the culture of manga and the components of a comic. The story line for the manga presented was made in collaboration with a partner, while I was responsible for all of the artwork.",
+        images: ["projects/manga-1.jpg", "projects/manga-2.jpg", "projects/manga-3.jpg", "projects/manga-4.jpg", "projects/manga-5.jpg", "projects/manga-6.jpg", "projects/manga-7.jpg", "projects/manga-8.jpg", "projects/manga-9.jpg", "projects/manga-10.jpg", "projects/manga-11.jpg"]
+      },
+      {
+        title: "BADM199: Exploring Leadership",
+        details: "This course's main focus was to define leadership. Our final project as a class was to create a book, where we each discussed our own interpretation and relationship with leadership. I took the opportunity to design and create the front cover, a chapter divider, and the back cover of the book.",
+        images: ["projects/leadership-1.jpg", "projects/leadership-2.jpg", "projects/leadership-3.jpg"]
+      },
+      {
+        title: "HORT223: Intelligent Behavior of Plants",
+        details: "This project was for a research course that I took, exploring the existence of plant intelligence. As the final project, I created a zine on Procreate that gave a quick introduction to scientist Heidi Appel, explaining her research and achievements in a fun, children's book style.",
+        images: ["projects/heidi-1.jpg", "projects/heidi-2.jpg", "projects/heidi-3.jpg", "projects/heidi-4.jpg", "projects/heidi-5.jpg", "projects/heidi-6.jpg", "projects/heidi-7.jpg", "projects/heidi-8.jpg"]
+      },
+      {
+        title: "High School Mural",
+        details: "This is a mural for Sycamore High School, my alma mater! This is the largest project I have done thus far, and was given full creative reign for its design. I wanted to create a fun, colorful mural that students could enjoy walking past and admire.",
+        images: ["projects/mural-1.jpg", "projects/mural-2.jpg"]
+      }
+      
+    ];
+
+    let currentProject = 0;
+    let currentImage = 0;
+
+    function showImage() {
+      const project = projects[currentProject];
+      const imgSrc = project.images[currentImage];
+
+      document.getElementById('lightbox-img').src = imgSrc;
+      document.getElementById('lightbox-img').alt = project.title;
+      document.getElementById('lightbox-caption').innerHTML = `
+        <h3>${project.title}</h3>
+        <p>${project.details}</p>
+        <p class="lightbox-counter">${currentImage + 1} / ${project.images.length}</p>
+      `;
+    }
+
+    window.openLightbox = function(projectIndex) {
+      currentProject = projectIndex;
+      currentImage = 0;
+      showImage();
+      document.getElementById('lightbox').classList.add('active');
+    };
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+
+    function nextImage(event) {
+      event.stopPropagation();
+      const images = projects[currentProject].images;
+      currentImage = (currentImage + 1) % images.length;
+      showImage();
+    }
+
+    function prevImage(event) {
+      event.stopPropagation();
+      const images = projects[currentProject].images;
+      currentImage = (currentImage - 1 + images.length) % images.length;
+      showImage();
+    }
+
+    document.getElementById('lightbox').addEventListener('click', closeLightbox);
+    document.querySelector('.lightbox-next').addEventListener('click', nextImage);
+    document.querySelector('.lightbox-prev').addEventListener('click', prevImage);
+    document.querySelector('.lightbox-content-side').addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (!document.getElementById('lightbox').classList.contains('active')) return;
+      const images = projects[currentProject].images;
+      if (e.key === 'ArrowRight') { currentImage = (currentImage + 1) % images.length; showImage(); }
+      if (e.key === 'ArrowLeft') { currentImage = (currentImage - 1 + images.length) % images.length; showImage(); }
+      if (e.key === 'Escape') closeLightbox();
+    });
+  });
+</script>
+
+<script src="nav.js"></script>
+</body>
+</html>
